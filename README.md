@@ -10,28 +10,29 @@ This Proof of Concept demonstrates how a bank can securely capture customer cons
 
 ---
 
+
 ## Flow Summary
 
-1. **Partner Web App (Laptop):**  
+1. **Partner Web App (Laptop):** ✅
    - User initiates a data access journey.
    - Partner redirects user to the bank’s consent web page.
 
-2. **Bank Consent Web Page (Laptop):**  
+2. **Bank Consent Web Page (Laptop):** ✅
    - Displays partner info and requested data.
    - Shows a QR code containing a consent session link.
    - Waits for consent status update.
 
-3. **Bank Mobile App:**  
+3. **Bank Mobile App:**
    - User scans QR code with bank mobile app.
    - App opens consent screen via deep link.
    - User authenticates, reviews, and approves/rejects request.
    - App updates consent status in the bank backend.
 
-4. **Bank Consent Web Page (Laptop):**  
-   - Polls bank backend for consent status.
+4. **Bank Consent Web Page (Laptop):** ⏳
+   - Polls bank backend for consent status. *(in progress)*
    - Once status is updated, redirects user back to partner web app with result.
 
-5. **Partner Web App (Laptop):**  
+5. **Partner Web App (Laptop):** ✅
    - Receives consent result via redirect.
    - Proceeds accordingly (e.g., access granted or denied).
 

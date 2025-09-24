@@ -1,0 +1,88 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+/* Celestial Finance Partner WebApp Styles */
+.partner-container {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  max-width: 480px;
+  margin: 2rem auto;
+  background: linear-gradient(135deg, #e3e6ff 0%, #d1c4e9 100%);
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(75,46,131,0.08);
+  padding: 2rem;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.partner-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.partner-header h1 {
+  color: #4b2e83;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.subtitle {
+  color: #6c757d;
+  font-size: 1rem;
+}
+.partner-main h2 {
+  color: #4b2e83;
+  margin-bottom: 1rem;
+}
+.partner-main ul {
+  text-align: left;
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+.partner-main li {
+  margin-bottom: 0.5rem;
+}
+.disclaimer {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 1rem 0;
+}
+.connect-btn {
+  background: linear-gradient(90deg, #4b2e83 0%, #7c43bd 100%);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 8px rgba(75,46,131,0.12);
+}
+.connect-btn:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
+.connect-btn:hover:not(:disabled) {
+  background: #2c1850;
+}
+.partner-footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #4b2e83;
+  font-size: 0.9rem;
+}
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
