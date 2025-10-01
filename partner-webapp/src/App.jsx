@@ -5,12 +5,17 @@ import './App.css';
 
 function App() {
   const [redirecting, setRedirecting] = useState(false);
+  const [customerId, setCustomerId] = useState('');
 
   const handleConnect = () => {
+    if (!customerId) {
+      alert('Please enter your Customer ID to continue.');
+      return;
+    }
     setRedirecting(true);
     // Simulate redirect after short delay
     setTimeout(() => {
-      window.location.href = 'http://localhost:5174/?partner=CelestialFinance&scope=account,transactions&purpose=OpenAPI-IADS-POC&redirect_uri=http://localhost:5173/consent-result';
+      window.location.href = `http://localhost:5174/?partner=CelestialFinance&scope=account,transactions&purpose=OpenAPI-IADS-POC&redirect_uri=http://localhost:5173/consent-result&customer_id=${encodeURIComponent(customerId)}`;
     }, 2000);
   };
 
@@ -29,6 +34,18 @@ function App() {
           <li>Account balance and transaction history</li>
           <li>Personal details for verification</li>
         </ul>
+        <div style={{ margin: '1rem 0' }}>
+          <label htmlFor="customerId" style={{ fontWeight: 'bold', marginRight: '0.5rem' }}>Customer ID:</label>
+          <input
+            id="customerId"
+            type="text"
+            value={customerId}
+            onChange={e => setCustomerId(e.target.value)}
+            placeholder="Enter your Customer ID"
+            style={{ padding: '0.4rem', borderRadius: '4px', border: '1px solid #ccc', width: '60%' }}
+            disabled={redirecting}
+          />
+        </div>
         <p className="disclaimer">
           You will be redirected to Summit Trust Bank to review and approve this request. Your data will be handled securely and you can revoke access at any time.
         </p>
